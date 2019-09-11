@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Common" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:56750/TicketsService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfTicket">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Ticket" nillable="true" type="tns:Ticket" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTicket" nillable="true" type="tns:ArrayOfTicket" />
+  <xs:complexType name="Ticket">
+    <xs:sequence>
+      <xs:element name="_x003C_answer_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_date_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_description_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_id_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_solverId_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_state_x003E_k__BackingField" type="tns:TicketState" />
+      <xs:element name="_x003C_title_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_workerId_x003E_k__BackingField" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Ticket" nillable="true" type="tns:Ticket" />
+  <xs:simpleType name="TicketState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="UNASSIGNED">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ASSIGNED">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="WAITING_FOR_ANSWERS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SOLVED">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TicketState" nillable="true" type="tns:TicketState" />
+  <xs:complexType name="Solver">
+    <xs:sequence>
+      <xs:element name="_x003C_id_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_name_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_username_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Solver" nillable="true" type="tns:Solver" />
+  <xs:complexType name="Worker">
+    <xs:sequence>
+      <xs:element name="_x003C_email_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_id_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_name_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Worker" nillable="true" type="tns:Worker" />
+  <xs:complexType name="ArrayOfQuestion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Question" nillable="true" type="tns:Question" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQuestion" nillable="true" type="tns:ArrayOfQuestion" />
+  <xs:complexType name="Question">
+    <xs:sequence>
+      <xs:element name="_x003C_answer_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_departmentId_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_description_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_id_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_isAnswered_x003E_k__BackingField" type="xs:boolean" />
+      <xs:element name="_x003C_ticketId_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_title_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Question" nillable="true" type="tns:Question" />
+  <xs:complexType name="ArrayOfWorker">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Worker" nillable="true" type="tns:Worker" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWorker" nillable="true" type="tns:ArrayOfWorker" />
+</xs:schema>

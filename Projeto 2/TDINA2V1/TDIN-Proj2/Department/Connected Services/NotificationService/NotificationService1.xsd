@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Common" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="EventOperation">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="QUESTION_ANSWERED" />
+      <xs:enumeration value="NEW_TICKET_ADDED" />
+      <xs:enumeration value="UPDATE_UNASSIGNED" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EventOperation" nillable="true" type="tns:EventOperation" />
+</xs:schema>

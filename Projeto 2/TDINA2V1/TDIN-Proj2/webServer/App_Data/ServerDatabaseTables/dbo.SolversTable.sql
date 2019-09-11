@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Solvers]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
+	[Username] NVARCHAR(32) NOT NULL, 
+    [Name] NVARCHAR(50) NOT NULL, 
+    [Password] NVARCHAR(50) NOT NULL
+)

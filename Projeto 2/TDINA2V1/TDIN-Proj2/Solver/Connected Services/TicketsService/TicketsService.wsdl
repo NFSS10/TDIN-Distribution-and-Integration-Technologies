@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TicketsService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:56750/TicketsService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:56750/TicketsService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:56750/TicketsService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Common" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITicketsService_HelloWorld_InputMessage">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_HelloWorld_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_Test_InputMessage">
+    <wsdl:part name="parameters" element="tns:Test" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_Test_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_DebugTests_InputMessage">
+    <wsdl:part name="parameters" element="tns:DebugTests" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_DebugTests_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DebugTestsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_AddTicket_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTicket" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_AddTicket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTicketResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_SendQuestionToDepartment_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendQuestionToDepartment" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_GetUnassignedTickets_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnassignedTickets" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_GetUnassignedTickets_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnassignedTicketsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_AssignTicketToSolver_InputMessage">
+    <wsdl:part name="parameters" element="tns:AssignTicketToSolver" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_AssignTicketToSolver_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AssignTicketToSolverResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_Register_InputMessage">
+    <wsdl:part name="parameters" element="tns:Register" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_Register_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_GetAssignedTickets_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssignedTickets" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_GetAssignedTickets_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssignedTicketsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_GetTicket_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTicket" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_GetTicket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTicketResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_AddQuestion_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddQuestion" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_AddQuestion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddQuestionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_UpdateTicketState_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTicketState" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_UpdateTicketState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTicketStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_GetAuthorInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthorInfo" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_GetAuthorInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthorInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_GetTicketQuestions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTicketQuestions" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_GetTicketQuestions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTicketQuestionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_CanCloseTicket_InputMessage">
+    <wsdl:part name="parameters" element="tns:CanCloseTicket" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_CanCloseTicket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CanCloseTicketResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_DeleteTicketQuestions_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTicketQuestions" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_DeleteTicketQuestions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTicketQuestionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_AnswerQuestion_InputMessage">
+    <wsdl:part name="parameters" element="tns:AnswerQuestion" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_AnswerQuestion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AnswerQuestionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_AddWorker_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddWorker" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_AddWorker_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddWorkerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_GetAllWorkers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllWorkers" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_GetAllWorkers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllWorkersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_GetWorkerTroubleTickets_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkerTroubleTickets" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_GetWorkerTroubleTickets_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkerTroubleTicketsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_SendEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendEmail" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_SendEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_SolveTicket_InputMessage">
+    <wsdl:part name="parameters" element="tns:SolveTicket" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_SolveTicket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SolveTicketResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_ClearServerDatabase_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClearServerDatabase" />
+  </wsdl:message>
+  <wsdl:message name="ITicketsService_ClearServerDatabase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClearServerDatabaseResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITicketsService">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITicketsService/HelloWorld" message="tns:ITicketsService_HelloWorld_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITicketsService/HelloWorldResponse" message="tns:ITicketsService_HelloWorld_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITicketsService/Test" message="tns:ITicketsService_Test_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITicketsService/TestResponse" message="tns:ITicketsService_Test_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DebugTests">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITicketsService/DebugTests" message="tns:ITicketsService_DebugTests_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITicketsService/DebugTestsResponse" message="tns:ITicketsService_DebugTests_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTicket">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITicketsService/AddTicket" message="tns:ITicketsService_AddTicket_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITicketsService/AddTicketResponse" message="tns:ITicketsService_AddTicket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendQuestionToDepartment">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITicketsService/SendQuestionToDepartment" message="tns:ITicketsService_SendQuestionToDepartment_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnassignedTickets">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITicketsService/GetUnassignedTickets" message="tns:ITicketsService_GetUnassignedTickets_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITicketsService/GetUnassignedTicketsResponse" message="tns:ITicketsService_GetUnassignedTickets_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignTicketToSolver">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITicketsService/AssignTicketToSolver" message="tns:ITicketsService_AssignTicketToSolver_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITicketsService/AssignTicketToSolverResponse" message="tns:ITicketsService_AssignTicketToSolver_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITicketsService/Login" message="tns:ITicketsService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITicketsService/LoginResponse" message="tns:ITicketsService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITicketsService/Register" message="tns:ITicketsService_Register_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITicketsService/RegisterResponse" message="tns:ITicketsService_Register_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignedTickets">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITicketsService/GetAssignedTickets" message="tns:ITicketsService_GetAssignedTickets_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITicketsService/GetAssignedTicketsResponse" message="tns:ITicketsService_GetAssignedTickets_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTicket">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITicketsService/GetTicket" message="tns:ITicketsService_GetTicket_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITicketsService/GetTicketResponse" message="tns:ITicketsService_GetTicket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddQuestion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITicketsService/AddQuestion" message="tns:ITicketsService_AddQuestion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITicketsService/AddQuestionResponse" message="tns:ITicketsService_AddQuestion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTicketState">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITicketsService/UpdateTicketState" message="tns:ITicketsService_UpdateTicketState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITicketsService/UpdateTicketStateResponse" message="tns:ITicketsService_UpdateTicketState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITicketsService/GetAuthorInfo" message="tns:ITicketsService_GetAuthorInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITicketsService/GetAuthorInfoResponse" message="tns:ITicketsService_GetAuthorInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTicketQuestions">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITicketsService/GetTicketQuestions" message="tns:ITicketsService_GetTicketQuestions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITicketsService/GetTicketQuestionsResponse" message="tns:ITicketsService_GetTicketQuestions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CanCloseTicket">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITicketsService/CanCloseTicket" message="tns:ITicketsService_CanCloseTicket_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITicketsService/CanCloseTicketResponse" message="tns:ITicketsService_CanCloseTicket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTicketQuestions">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITicketsService/DeleteTicketQuestions" message="tns:ITicketsService_DeleteTicketQuestions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITicketsService/DeleteTicketQuestionsResponse" message="tns:ITicketsService_DeleteTicketQuestions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AnswerQuestion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITicketsService/AnswerQuestion" message="tns:ITicketsService_AnswerQuestion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITicketsService/AnswerQuestionResponse" message="tns:ITicketsService_AnswerQuestion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddWorker">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITicketsService/AddWorker" message="tns:ITicketsService_AddWorker_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITicketsService/AddWorkerResponse" message="tns:ITicketsService_AddWorker_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllWorkers">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITicketsService/GetAllWorkers" message="tns:ITicketsService_GetAllWorkers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITicketsService/GetAllWorkersResponse" message="tns:ITicketsService_GetAllWorkers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkerTroubleTickets">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITicketsService/GetWorkerTroubleTickets" message="tns:ITicketsService_GetWorkerTroubleTickets_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITicketsService/GetWorkerTroubleTicketsResponse" message="tns:ITicketsService_GetWorkerTroubleTickets_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITicketsService/SendEmail" message="tns:ITicketsService_SendEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITicketsService/SendEmailResponse" message="tns:ITicketsService_SendEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SolveTicket">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITicketsService/SolveTicket" message="tns:ITicketsService_SolveTicket_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITicketsService/SolveTicketResponse" message="tns:ITicketsService_SolveTicket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearServerDatabase">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITicketsService/ClearServerDatabase" message="tns:ITicketsService_ClearServerDatabase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITicketsService/ClearServerDatabaseResponse" message="tns:ITicketsService_ClearServerDatabase_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITicketsService" type="tns:ITicketsService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/ITicketsService/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <soap:operation soapAction="http://tempuri.org/ITicketsService/Test" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DebugTests">
+      <soap:operation soapAction="http://tempuri.org/ITicketsService/DebugTests" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTicket">
+      <soap:operation soapAction="http://tempuri.org/ITicketsService/AddTicket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendQuestionToDepartment">
+      <soap:operation soapAction="http://tempuri.org/ITicketsService/SendQuestionToDepartment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnassignedTickets">
+      <soap:operation soapAction="http://tempuri.org/ITicketsService/GetUnassignedTickets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignTicketToSolver">
+      <soap:operation soapAction="http://tempuri.org/ITicketsService/AssignTicketToSolver" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/ITicketsService/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <soap:operation soapAction="http://tempuri.org/ITicketsService/Register" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignedTickets">
+      <soap:operation soapAction="http://tempuri.org/ITicketsService/GetAssignedTickets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTicket">
+      <soap:operation soapAction="http://tempuri.org/ITicketsService/GetTicket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddQuestion">
+      <soap:operation soapAction="http://tempuri.org/ITicketsService/AddQuestion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTicketState">
+      <soap:operation soapAction="http://tempuri.org/ITicketsService/UpdateTicketState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorInfo">
+      <soap:operation soapAction="http://tempuri.org/ITicketsService/GetAuthorInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTicketQuestions">
+      <soap:operation soapAction="http://tempuri.org/ITicketsService/GetTicketQuestions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CanCloseTicket">
+      <soap:operation soapAction="http://tempuri.org/ITicketsService/CanCloseTicket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTicketQuestions">
+      <soap:operation soapAction="http://tempuri.org/ITicketsService/DeleteTicketQuestions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnswerQuestion">
+      <soap:operation soapAction="http://tempuri.org/ITicketsService/AnswerQuestion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddWorker">
+      <soap:operation soapAction="http://tempuri.org/ITicketsService/AddWorker" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllWorkers">
+      <soap:operation soapAction="http://tempuri.org/ITicketsService/GetAllWorkers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkerTroubleTickets">
+      <soap:operation soapAction="http://tempuri.org/ITicketsService/GetWorkerTroubleTickets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <soap:operation soapAction="http://tempuri.org/ITicketsService/SendEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolveTicket">
+      <soap:operation soapAction="http://tempuri.org/ITicketsService/SolveTicket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearServerDatabase">
+      <soap:operation soapAction="http://tempuri.org/ITicketsService/ClearServerDatabase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TicketsService">
+    <wsdl:port name="BasicHttpBinding_ITicketsService" binding="tns:BasicHttpBinding_ITicketsService">
+      <soap:address location="http://localhost:56750/TicketsService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

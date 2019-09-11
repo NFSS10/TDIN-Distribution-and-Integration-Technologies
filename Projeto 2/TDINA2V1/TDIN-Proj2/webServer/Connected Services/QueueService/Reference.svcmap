@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b206658f-2217-47d4-bdb5-8f618bdaaa7e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/Department/QueueService/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="629601f9-ce9d-4643-942e-8d990818dd7e" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Department/QueueService/?xsd=xsd0" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="bf15d7d2-662a-4fc8-90dd-f16fe496b3e3" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Department/QueueService/?xsd=xsd1" />
+    <MetadataFile FileName="QueueService.wsdl" MetadataType="Wsdl" ID="3e93d879-f93d-460c-bfa7-72ed5baa1099" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Department/QueueService/?wsdl" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="8007a2ae-165f-4f62-b67d-5dda37bf1d7d" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Department/QueueService/?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

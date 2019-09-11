@@ -1,0 +1,14 @@
+G:\Projetos\Faculdade\TDIN\TDIN-Proj1\[TDIN]Proj1\Client\bin\Debug\Client.exe.config
+G:\Projetos\Faculdade\TDIN\TDIN-Proj1\[TDIN]Proj1\Client\bin\Debug\Client.exe
+G:\Projetos\Faculdade\TDIN\TDIN-Proj1\[TDIN]Proj1\Client\bin\Debug\Client.pdb
+G:\Projetos\Faculdade\TDIN\TDIN-Proj1\[TDIN]Proj1\Client\bin\Debug\Common.dll
+G:\Projetos\Faculdade\TDIN\TDIN-Proj1\[TDIN]Proj1\Client\bin\Debug\Common.pdb
+G:\Projetos\Faculdade\TDIN\TDIN-Proj1\[TDIN]Proj1\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+G:\Projetos\Faculdade\TDIN\TDIN-Proj1\[TDIN]Proj1\Client\obj\Debug\Client.MainWindow.resources
+G:\Projetos\Faculdade\TDIN\TDIN-Proj1\[TDIN]Proj1\Client\obj\Debug\Client.Properties.Resources.resources
+G:\Projetos\Faculdade\TDIN\TDIN-Proj1\[TDIN]Proj1\Client\obj\Debug\Client.QuotaPopUp.resources
+G:\Projetos\Faculdade\TDIN\TDIN-Proj1\[TDIN]Proj1\Client\obj\Debug\Client.WelcomeWindowForm.resources
+G:\Projetos\Faculdade\TDIN\TDIN-Proj1\[TDIN]Proj1\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+G:\Projetos\Faculdade\TDIN\TDIN-Proj1\[TDIN]Proj1\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+G:\Projetos\Faculdade\TDIN\TDIN-Proj1\[TDIN]Proj1\Client\obj\Debug\Client.exe
+G:\Projetos\Faculdade\TDIN\TDIN-Proj1\[TDIN]Proj1\Client\obj\Debug\Client.pdb

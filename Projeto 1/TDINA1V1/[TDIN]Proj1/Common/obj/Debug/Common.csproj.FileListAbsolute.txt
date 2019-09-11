@@ -1,0 +1,6 @@
+G:\Projetos\Faculdade\TDIN\TDIN-Proj1\[TDIN]Proj1\Common\bin\Debug\Common.dll
+G:\Projetos\Faculdade\TDIN\TDIN-Proj1\[TDIN]Proj1\Common\bin\Debug\Common.pdb
+G:\Projetos\Faculdade\TDIN\TDIN-Proj1\[TDIN]Proj1\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+G:\Projetos\Faculdade\TDIN\TDIN-Proj1\[TDIN]Proj1\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+G:\Projetos\Faculdade\TDIN\TDIN-Proj1\[TDIN]Proj1\Common\obj\Debug\Common.dll
+G:\Projetos\Faculdade\TDIN\TDIN-Proj1\[TDIN]Proj1\Common\obj\Debug\Common.pdb
